@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "850689080595",
+    "project_id": "flutter-onboarding",
+    "storage_bucket": "flutter-onboarding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850689080595:android:9b8e5b77e5434c8edc2ee6",
+        "android_client_info": {
+          "package_name": "com.weoveri.flutteronboarding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850689080595-beau7q6obt9v7277fpv82kckan016b32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaAuoK3O2rc9u5t7AHck1mdGfSg7fcOv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850689080595-beau7q6obt9v7277fpv82kckan016b32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
