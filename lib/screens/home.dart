@@ -6,8 +6,6 @@ import 'package:flutteronboarding/themes/loadingScreen.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 class Home extends StatefulWidget {
-  // Home({Key key}) : super(key: key);
-
   @override
   _HomeState createState() => _HomeState();
 }
@@ -60,12 +58,6 @@ class _HomeState extends State<Home> {
   }
 
   @override
-  // void initState() {
-  //   super.initState();
-  //   // final FirebaseDatabase database = FirebaseDatabase.instance;
-  //   // itemRef = database.reference().child('profiles');
-  // }
-
   Widget build(BuildContext context) {
     return loading
         ? LoadingScreen()

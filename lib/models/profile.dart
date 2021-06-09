@@ -32,17 +32,6 @@ class Profile {
     }
   }
 
-  // Future addtoRealtime() async {
-  //   // final ref = referenceData.reference();
-  //   // CollectionReference profile = _db.collection('profile');
-  //   try {
-  //     // ref.child(this.name).set("name");
-  //     print("Data added to realtime database");
-  //   } catch (err) {
-  //     return "Error";
-  //   }
-  // }
-
   Future updateDatatoDB(String docID) async {
     CollectionReference profile = _db.collection('profile');
     try {
