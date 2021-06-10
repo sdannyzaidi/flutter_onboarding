@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutteronboarding/models/profile.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutteronboarding/backend/validator.dart';
 import 'package:flutteronboarding/themes/loadingScreen.dart';
 import 'package:firebase_database/firebase_database.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -14,13 +16,15 @@ class _HomeState extends State<Home> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   Profile user = Profile(name: '', age: 0, gender: '');
   bool loading = false;
-  final databaseReference = FirebaseDatabase.instance.reference();
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
+
   void validate() async {
-    if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState.validate()) {
       setState(() {
         loading = true;
       });
       await user.addDatatoDB();
+      await user.addDataRealtime();
       setState(() {
         loading = false;
       });
@@ -37,7 +41,7 @@ class _HomeState extends State<Home> {
   }
 
   void update() async {
-    if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState.validate()) {
       setState(() {
         loading = true;
       });

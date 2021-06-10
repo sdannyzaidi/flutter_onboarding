@@ -1,4 +1,4 @@
-String? nameValidator(String name) {
+String nameValidator(String name) {
   if (name.isEmpty) {
     return "Field can not be empty.";
   } else if (name.length > 30) {
